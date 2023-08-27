@@ -20,7 +20,7 @@ paragraph for each move based on the following factors:
 1. [Megaparsec](https://hackage.haskell.org/package/megaparsec)
 
 ### Installation & Usage
-Provided that your system already has Haskell pre-installed, refer to [GHCup](https://www.haskell.org/ghcup/), run
+Provided that your system already has Haskell pre-installed (if not refer to [GHCup](https://www.haskell.org/ghcup/)), run
 
 ``` bash
 stack -- run *pathtofile*
