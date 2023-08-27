@@ -4,17 +4,17 @@
 A parser for BGN files that will take in a file and generate a story from it if it is valid.
 
 ### Features
-– If the file is of an incorrect format then the program will return a statement indicating the user
+* If the file is of an incorrect format then the program will return a statement indicating the user
 of this and it will not parse the program at all.
-– If the file is of a correct format but during the course of execution the program identifies any
+* If the file is of a correct format but during the course of execution the program identifies any
 moves that are played which defy the basic rules of the Bean’s Gambit, it will provide detailed
 information about this including the expected result as well as the nature of the move that was
 played.
-- Otherwise, if the file was successfully parsed, it will play the game in order, generating a story
+* Otherwise, if the file was successfully parsed, it will play the game in order, generating a story
 paragraph for each move based on the following factors
-1. The type of move (a standard move, a capture, or the end of a game)
-2. The player making the move
-3. Whether the player making the move is winning/losing at the time of making the aforementioned move
+    1. The type of move (a standard move, a capture, or the end of a game)
+    2. The player making the move
+    3. Whether the player making the move is winning/losing at the time of making the aforementioned move
 
 ### Libraries/Frameworks Used
 1. [Megaparsec](https://hackage.haskell.org/package/megaparsec)
