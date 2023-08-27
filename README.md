@@ -11,7 +11,7 @@ moves that are played which defy the basic rules of the Bean’s Gambit, it will
 information about this including the expected result as well as the nature of the move that was
 played.
 * Otherwise, if the file was successfully parsed, it will play the game in order, generating a story
-paragraph for each move based on the following factors
+paragraph for each move based on the following factors:
     1. The type of move (a standard move, a capture, or the end of a game)
     2. The player making the move
     3. Whether the player making the move is winning/losing at the time of making the aforementioned move
