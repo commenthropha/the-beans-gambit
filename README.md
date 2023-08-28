@@ -32,7 +32,7 @@ The aim for this project was to create a parser for files using Bean's Gambit No
 ```
 XX. MOVE_BLUE MOVE_RED
 ```
-The only exception to this rule is the last line, which may only have a Blue move if the game ended after Blue's move
+The only exception to this rule is the last line, which may only have a Blue move if the game ended after Blue's move.
 ```
 XX. MOVE_BLUE
 ```
