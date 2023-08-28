@@ -28,14 +28,14 @@ stack -- run *pathtofile*
 
 # My Development Experience
 ## The Problem
-The aim for this project was to create a parser for files using Bean's Gambit Notation (`.bgn`) that would check if a file is valid. Bean’s Gambit Notation (BGN) is a propietary format used to play a game of the "The Bean's Gambit" based on a similar notation for Chess called Portable Game Notation (PGN), where each line is in the following format:
+The aim for this project was to create a parser for files using Bean's Gambit Notation `.bgn` that would check if a file is valid. Bean’s Gambit Notation (BGN) is a propietary format used to play a game of the "The Bean's Gambit" based on a similar notation for Chess called Portable Game Notation (PGN), where each line is in the following format:
 ```
 XX. MOVE_BLUE MOVE_RED
 ```
 The only exception to this rule is the last line, which may only have a Blue move if the game ended after Blue's move
-``
+```
 XX. MOVE_BLUE
-``
+```
 Both MOVE_BLUE and MOVE_RED are specified in the same format and may be any of
 the following shapes:
 ``` 
