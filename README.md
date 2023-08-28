@@ -28,6 +28,23 @@ stack -- run *pathtofile*
 
 # My Development Experience
 ## The Problem
+The aim for this project was to create a parser for files using Bean's Gambit Notation (`.bgn`) that would check if a file is valid. Bean’s Gambit Notation (BGN) is a propietary format used to play a game of the "The Bean's Gambit" based on a similar notation for Chess called Portable Game Notation (PGN), where each line is in the following format:
+```
+XX. MOVE_BLUE MOVE_RED
+```
+The only exception to this rule is the last line, which may only have a Blue move if the game ended after Blue's move
+``
+XX. MOVE_BLUE
+``
+Both MOVE_BLUE and MOVE_RED are specified in the same format and may be any of
+the following shapes:
+``` 
+a1a2  -- Move a piece on a1 to empty square a2
+c3xc2 -- Using a bean on c3 to capture a piece on c2
+D     -- The last move resulted in a drawn game state
+#     -- The player loses due to a trapped cow
+```
+
 Throughout the entirety of the design process, I was particularly scrupulous about abiding by principle of separation of concerns - consequently, I abstracted the parsing process into separate parsers for each distinct type of `PlayerMove` as well as each line. I tested these parsers at each level of the design process by feeding test data into `parseTest` to make sure that they were functioning as intended. 
 
 The `parseLine` parser was of particular importance as this served as the foundation for my file parser. Each line in a `.bgn` file consisted of a pair of moves, therefore it made sense to me to parse this as a tuple of PlayerMoves and store it as a `BGNLine` type as it would be a more direct translation of the lines into a data type than parsing each move individually. This served a number of advantages such as easily being able to tell which player was making a move as well as the corresponding line number in the `.bgn` file by looking at the index in the tuple and the index of the `BGNLine` respectively. 
